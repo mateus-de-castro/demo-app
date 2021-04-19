@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { initializeIcons } from "@fluentui/font-icons-mdl2";
+import FirstDemo from "./FirstDemo";
+import SecondDemo from "./SecondDemo";
+import ThirdDemo from "./ThirdDemo";
+import FourthDemo from "./FourthDemo";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  initializeIcons();
+  const path = window.location.href.split("/").slice(-1)[0].toLowerCase();
+
+  switch (path) {
+    case "firstdemo":
+      return <FirstDemo />;
+    case "seconddemo":
+      return <SecondDemo />;
+    case "thirddemo":
+      return <ThirdDemo />;
+    case "fourthdemo":
+      return <FourthDemo />;
+    default:
+      throw new Error("Invalid Path");
+  }
 }
 
 export default App;
