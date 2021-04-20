@@ -33,6 +33,7 @@ module.exports = {
     "import/prefer-default-export": 0,
     "react/destructuring-assignment": 0,
     "no-use-before-define": 0,
-    "@typescript-eslint/no-use-before-define": 0
+    "@typescript-eslint/no-use-before-define": 0,
+    "react/self-closing-comp": 0,
   },
 };
